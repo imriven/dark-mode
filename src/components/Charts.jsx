@@ -5,6 +5,7 @@ import Styled from "styled-components"
 const WholeDiv = Styled.div`
 background: radial-gradient(circle, rgba(255,255,255,0.41220238095238093) 0%, rgba(0,0,0,0.4150035014005602) 100%);
 padding: 2% 0;
+width:100%
 `
 
 const ContainerDiv = Styled.div`
