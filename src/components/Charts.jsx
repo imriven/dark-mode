@@ -9,9 +9,9 @@ width:100%
 `
 
 const ContainerDiv = Styled.div`
-background: radial-gradient(circle, rgba(142,255,92,1) 0%, rgba(0,0,0,1) 100%);
+background: radial-gradient(circle, rgba(149,255,113,0.9) 0%, rgba(23,23,23,0.9) 100%);
 border-radius: 5px;
-box-shadow: 5px 5px 8px cadetBlue;
+box-shadow: 5px 5px 8px black;
 `
 
 const AwesomeTitleHeader = Styled.h2`
