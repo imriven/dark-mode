@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -136,7 +136,7 @@ table {
 
 html {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
 
@@ -165,9 +165,19 @@ img {
   font-family: sans-serif;
   text-align: center;
   width: 100%;
+  color: black;
+}
+.container {
+  background-image: url(https://cdn.pixabay.com/photo/2016/03/23/14/55/matrix-1274888_960_720.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
 .navbar {
+  color: black;
+  background-color: whitesmoke;
   align-items: center;
   border-bottom: 1px solid rgb(221, 221, 221);
   display: flex;
@@ -177,7 +187,7 @@ img {
   width: 100%;
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 15px -8px rgba(0, 255, 21, 0.42);
 }
 
 .dark-mode__toggle {
@@ -225,14 +235,14 @@ img {
   max-width: 900px;
   margin-bottom: 16px;
 }
-
+/*
 .coin__title {
   display: block;
   margin-left: 8px;
     min-width: 160px;
 text-align: left;
 }
-
+*/
 .coin__symbol {
   display: block;
   margin-bottom: 10px;
@@ -244,10 +254,17 @@ text-align: left;
 
 .dark-mode {
   color: #fff;
-  background-color: #313843;
+  /*  background-color: #313843; */
+  .container {
+  color: #8eff5c;
+  background-image: url(https://cdn.pixabay.com/photo/2017/05/29/18/22/matrix-2354492_960_720.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  }
 
   .navbar {
-    background-color: #1F2022;
+    color: #8eff5c;
+    background-color: #1f2022;
     border: none;
   }
 }
