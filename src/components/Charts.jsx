@@ -1,20 +1,55 @@
 import React from "react";
 import Chart from "./Chart";
+import Styled from "styled-components"
 
-const Charts = ({ coinData }) => {
+const WholeDiv = Styled.div`
+background: radial-gradient(circle, rgba(255,255,255,0.41220238095238093) 0%, rgba(0,0,0,0.4150035014005602) 100%);
+padding: 2% 0;
+width:100%
+`
+
+const ContainerDiv = Styled.div`
+background: radial-gradient(circle, rgba(149,255,113,0.9) 0%, rgba(23,23,23,0.9) 100%);
+border-radius: 5px;
+box-shadow: 5px 5px 8px black;
+`
+
+const AwesomeTitleHeader = Styled.h2`
+text-shadow: 3px 3px 5px gray;
+margin-bottom: 5%;
+`
+
+const AwesomeImage = Styled.img`
+border-radius: 50%;
+box-shadow: 5px 5px 8px black;
+margin-bottom: 10%;
+width:25%;
+background-color:white;
+`
+
+const wrapper = Styled.div`
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+`
+
+const Charts = ({ coinData, darkMode }) => {
   return (
-    <div className="charts">
+    <WholeDiv className="charts">
       {coinData.map(coin => (
         <div className="chart__container" key={coin.name}>
-          <h2 className="coin__title">{coin.name}</h2>
-          <h4 className="coin__symbol">{coin.symbol}</h4>
-          <div className="coin__logo">
-            <img src={coin.image} height="40" alt={coin.name} />
-          </div>
-          <Chart sparklineData={coin.sparkline_in_7d.price} />
+          <wrapper>
+    
+            <AwesomeTitleHeader className="coin__title">{coin.name}</AwesomeTitleHeader>
+            <AwesomeImage src={coin.image} height="40" alt={coin.name} />
+
+          </wrapper>
+          <ContainerDiv>
+          <Chart sparklineData={coin.sparkline_in_7d.price} darkMode={darkMode} />
+        </ContainerDiv>
         </div>
       ))}
-    </div>
+    </WholeDiv>
   );
 };
 export default Charts;
